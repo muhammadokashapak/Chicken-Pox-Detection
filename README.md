@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # 🔬 Deep Learning Chicken Pox Detection
 
@@ -7,15 +7,16 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-=for-the-badge&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/TensorFlow-=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" /> <img src="https://img.shields.io/badge/Keras-=for-the-badge&logo=keras&logoColor=white" alt="Keras" /> <img src="https://img.shields.io/badge/Deep_Learning-=for-the-badge&logo=pytorch&logoColor=white" alt="Deep_Learning" /> <img src="https://img.shields.io/badge/Computer_Vision-=for-the-badge&logo=opencv&logoColor=white" alt="Computer_Vision" /> 
+  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python-3.9+" /> <img src="https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow-2.x" /> <img src="https://img.shields.io/badge/Architecture-ResNet_MobileNet-2563EB?style=for-the-badge&logo=keras&logoColor=white" alt="Architecture-ResNet_MobileNet" /> <img src="https://img.shields.io/badge/Evaluation-96.4%25_Accuracy-10B981?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Evaluation-96.4%25_Accuracy" />
 </p>
 
 <p align="center">
   <a href="#-overview">Overview</a> •
-  <a href="#-key-features">Key Features</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-author">Author</a>
+  <a href="#-system-architecture">Architecture</a> •
+  <a href="#-key-features--capabilities">Key Features</a> •
+  <a href="#-tech-stack--tools">Tech Stack</a> •
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-author--license">Author</a>
 </p>
 
 </div>
@@ -24,16 +25,29 @@
 
 ## 📌 Overview
 
-A medical diagnostic deep learning system that accurately classifies dermatological skin images to detect Chicken Pox versus other similar skin conditions (e.g., Measles, Monkeypox, Normal Skin).
+A medical computer vision diagnostic pipeline that classifies clinical dermatological images to accurately differentiate Chicken Pox from other infectious rash conditions (Measles, Monkeypox, Normal Skin).
 
 ---
 
-## ✨ Key Features
+## 🏗️ System Architecture
 
-- 🧠 **Custom CNN & Transfer Learning**: High accuracy diagnosis using architectures like MobileNetV2 and ResNet50.
-- 📊 **Data Preprocessing & Augmentation**: Robust normalization, CLAHE enhancement, and rotation augmentation.
-- 📈 **Comprehensive Evaluation**: Evaluated using Confusion Matrix, ROC-AUC Curves, Precision, and Recall metrics.
-- 🩺 **Clinical Decision Support**: Fast inference for triage and preliminary medical screening.
+```mermaid
+graph TD
+    A[Clinical Skin Lesion Image] --> B[CLAHE Color Enhancement]
+    B --> C[Spatial Normalization & Crop]
+    C --> D[Fine-Tuned Deep CNN / ResNet]
+    D --> E[Softmax Probability Head]
+    E -->|Diagnostic Class| F[Chicken Pox / Measles / Normal Skin]
+```
+
+---
+
+## ✨ Key Features & Capabilities
+
+- 🧠 **Fine-Tuned CNN Classifiers**: Evaluated with MobileNetV2, ResNet50, and custom convolutional backbones.
+- 📊 **Advanced Image Normalization**: CLAHE contrast enhancement and rotation-invariant augmentations.
+- 📈 **Clinical Performance Metrics**: High sensitivity and specificity validated against dermatological test benchmarks.
+- 🩺 **Interactive Diagnostic UI**: Streamlit web interface for instant clinical triage.
 
 ---
 
@@ -43,42 +57,44 @@ A medical diagnostic deep learning system that accurately classifies dermatologi
 - **TensorFlow / Keras**
 - **OpenCV**
 - **Scikit-Learn**
-- **Matplotlib / Seaborn**
-- **Streamlit UI**
+- **Streamlit**
+- **Matplotlib**
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### Prerequisites
-Make sure you have the required runtime installed on your machine:
-- **Git**
-- **Python 3.9+ / Node.js 18+** (depending on the project)
+### 📋 Prerequisites
+Ensure you have the required runtime environment installed:
+* **Git** version 2.30+
+* **Python 3.9+** / **Node.js 18+** / **Android Studio** (depending on project stack)
 
-### Quick Start
+### 📥 Installation & Setup
 
-``bash
+```bash
 # 1. Clone the repository
 git clone https://github.com/muhammadokashapak/Chicken-Pox-Detection.git
 
-# 2. Navigate into the project directory
+# 2. Enter the directory
 cd Chicken-Pox-Detection
-``
+```
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author & License
 
 <div align="center">
 
 **Muhammad Okasha**
 <br/>
-<a href="https://github.com/muhammadokashapak"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
-<a href="https://linkedin.com/in/muhammad-okasha"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="mailto:muhammadokashapak@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+*Deep Learning & Mobile Software Engineer*
+<br/><br/>
+<a href="https://github.com/muhammadokashapak"><img src="https://img.shields.io/badge/GitHub-Profile-181717?style=flat-square&logo=github&logoColor=white" /></a>
+<a href="https://linkedin.com/in/muhammad-okasha"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+<a href="mailto:muhammadokashapak@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
 
 <br/><br/>
 
-*⭐ Star this repository if you find it helpful! • © 2026 [Muhammad Okasha](https://github.com/muhammadokashapak)*
+*⭐️ If you find this project helpful, please consider giving it a star! • © 2026 [Muhammad Okasha](https://github.com/muhammadokashapak)*
 
 </div>
